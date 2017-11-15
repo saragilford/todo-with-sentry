@@ -19,4 +19,4 @@ module TodoList
       config.dsn = 'https://3c2d77d0927e43148c8ae3f40c5b3043:9b91be053eba471194618cdfb38d4aff@sentry.io/244586'
     end
   end
-end
+end                
