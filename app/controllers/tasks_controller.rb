@@ -14,7 +14,8 @@ class TasksController < ApplicationController
 
   # GET /tasks/new
   def new
-    @task = Task.new
+    @list = List.find(params[:list_id])
+    @task = Task.new(list_id: params[:list_id])
   end
 
   # GET /tasks/1/edit
@@ -69,6 +70,6 @@ class TasksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def task_params
-      params.fetch(:task, {})
+      params.fetch(:task).permit(:description, :completed)
     end
 end
